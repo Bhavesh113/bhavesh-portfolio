@@ -19,8 +19,7 @@ import {
   SiSpringboot,
   SiHibernate,
   SiMysql,
-  SiPostman,
-  SiJquery
+  SiPostman
 } from "react-icons/si";
 
 import { skills } from "../data/constants";
