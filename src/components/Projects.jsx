@@ -14,9 +14,9 @@ function Projects() {
         </h2>
 
         <p className="section-description">
-          Projects where I applied my programming and development
-          skills to build practical applications.
-        </p>
+  Real-world projects focused on backend development, secure APIs,
+  full-stack applications, and scalable software solutions.
+</p>
 
         <div className="projects-grid">
 

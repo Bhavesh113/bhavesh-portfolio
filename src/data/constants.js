@@ -61,7 +61,7 @@ export const skills = [
     title: "Backend",
     skills: [
       "Spring",
-      "SpringBoot",
+      "Spring Boot",
       "Hibernate",
       "JPA",
       "JDBC",
@@ -75,7 +75,7 @@ export const skills = [
     skills: [
       "Java",
       "C",
-      "C++",
+      "C++"
     ]
   },
 
@@ -95,7 +95,7 @@ export const skills = [
 
 export const experiences = [
   {
-    role: "Softwar Developer Intern",
+    role: "Software Developer Intern",
     company: "Hefshine Software",
     date: "July 2025 - March 2026",
     description:
@@ -104,6 +104,31 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    title: "Smart Payment Transaction Platform",
+
+    description:
+  "A full-stack fintech platform that simulates secure digital payment processing with JWT authentication, transaction validation, idempotency protection, fraud and risk detection, wallet management, Kafka-based event processing, and transaction analytics.",
+
+    technologies: [
+      "Java 17",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "Spring Data JPA",
+      "Hibernate",
+      "MySQL",
+      "Apache Kafka",
+      "React.js",
+      "Axios",
+      "Docker",
+      "Swagger"
+    ],
+
+    github:
+      "#"
+  },
+
   {
     title: "EV Charging Station Management System",
 
@@ -116,9 +141,9 @@ export const projects = [
       "REST API",
       "MySQL",
       "React.js",
-      "Html",
-      "Css",
-      "GMap API"
+      "HTML",
+      "CSS",
+      "Google Maps API"
     ],
 
     github: "#"
@@ -136,31 +161,12 @@ export const projects = [
       "Hibernate",
       "JPA",
       "MySQL",
-      "Html",
-      "Css",
-      "Javascript",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React.js"
     ],
 
     github: "#"
-  },
-  {
-    title: "Student Management System",
-
-    description:
-      "Computer Engineering graduate with hands-on experience in Java, Spring Boot, REST APIs, Hibernate, JPA, SQL and React.js. I enjoy building scalable backend applications and solving real-world problems through software.",
-
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Spring Data JPA",
-      "MySQL",
-      "REST APIs",
-      "JWT",
-      "React.js",
-      "Axios"
-    ],
-
-    github: ""
   }
 ];
