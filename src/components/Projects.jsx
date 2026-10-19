@@ -1,106 +1,133 @@
+
 import React from "react";
-import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaArrowUpRightFromSquare,
+  FaGlobe
+} from "react-icons/fa6";
 
 import { projects } from "../data/constants";
 
 function Projects() {
   return (
     <section className="section projects-section" id="projects">
-
       <div className="section-container">
-
         <h2 className="section-title">
           Featured Projects
         </h2>
 
         <p className="section-description">
-  Real-world projects focused on backend development, secure APIs,
-  full-stack applications, and scalable software solutions.
-</p>
+          Real-world projects focused on backend development, secure APIs,
+          full-stack applications, and scalable software solutions.
+        </p>
 
         <div className="projects-grid">
-
           {projects.map((project, index) => {
-
             const hasGithub =
               project.github &&
               project.github.startsWith("http");
 
+            const hasFrontendGithub =
+              project.frontendGithub &&
+              project.frontendGithub.startsWith("http");
+
+            const hasDemo =
+              project.demo &&
+              project.demo.startsWith("http");
+
             return (
               <article
                 className="project-card"
-                key={index}
+                key={project.title || index}
               >
-
-                {/* Project Number */}
                 <div className="project-number">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
                 <div className="project-content">
+                  <h3>{project.title}</h3>
 
-                  {/* Project Title */}
-                  <h3>
-                    {project.title}
-                  </h3>
-
-                  {/* Project Description */}
                   <p className="project-description">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="project-technologies">
-
-                    {project.technologies.map(
-                      (technology, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="project-tech"
-                        >
-                          {technology}
-                        </span>
-                      )
-                    )}
-
+                    {project.technologies.map((technology) => (
+                      <span
+                        key={technology}
+                        className="project-tech"
+                      >
+                        {technology}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* Project Links */}
                   <div className="project-links">
-
-                    {hasGithub ? (
+                    {hasDemo && (
                       <a
-                        href={project.github}
+                        href={project.demo}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="project-button"
-                        aria-label={`View ${project.title} on GitHub`}
+                        aria-label={`Open live demo of ${project.title}`}
                       >
-                        <FaGithub />
-                        <span>View on GitHub</span>
+                        <FaGlobe />
+                        <span>Live Demo</span>
                         <FaArrowUpRightFromSquare
                           className="project-link-icon"
                         />
                       </a>
-                    ) : (
-                      <span className="project-button project-button-disabled">
-                        <FaGithub />
-                        <span>GitHub Coming Soon</span>
-                      </span>
                     )}
 
+                    {hasGithub && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-button"
+                        aria-label={`View ${project.title} on GitHub`}
+                      >
+                        <FaGithub />
+                        <span>
+                          {hasFrontendGithub
+                            ? "Backend GitHub"
+                            : "View on GitHub"}
+                        </span>
+                        <FaArrowUpRightFromSquare
+                          className="project-link-icon"
+                        />
+                      </a>
+                    )}
+
+                    {hasFrontendGithub && (
+                      <a
+                        href={project.frontendGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-button"
+                        aria-label={`View ${project.title} frontend on GitHub`}
+                      >
+                        <FaGithub />
+                        <span>Frontend GitHub</span>
+                        <FaArrowUpRightFromSquare
+                          className="project-link-icon"
+                        />
+                      </a>
+                    )}
+
+                    {!hasGithub && !hasDemo && (
+                      <span className="project-button project-button-disabled">
+                        <FaGithub />
+                        <span>Links Coming Soon</span>
+                      </span>
+                    )}
                   </div>
-
                 </div>
-
               </article>
             );
           })}
-
         </div>
-
       </div>
-
     </section>
   );
 }

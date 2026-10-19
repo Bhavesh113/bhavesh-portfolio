@@ -1,45 +1,35 @@
+
 export const Bio = {
   name: "Bhavesh Gangarde",
-
   roles: [
     "Java Backend Developer",
     "Spring Boot Developer",
     "Java Full Stack Developer"
   ],
-
   description:
     "Computer Engineering graduate with hands-on experience in Java, Spring Boot, REST APIs, Hibernate, JPA, SQL and React.js. I enjoy building scalable backend applications and solving real-world problems through software.",
-
   github: "https://github.com/Bhavesh113",
-
   linkedin: "https://www.linkedin.com/in/bhavesh-gangarde-757b18292/",
-
   email: "bhaveshgangarde@gmail.com",
-
   resume: "/resume.pdf"
 };
 
 export const education = [
   {
     degree: "Bachelor of Engineering - Computer Engineering",
-    college:
-      "SKN Sinhgad Institute of Technology & Science, Lonavala",
+    college: "SKN Sinhgad Institute of Technology & Science, Lonavala",
     date: "July 2021 - June 2025",
     grade: "CGPA: 8.31 / 10"
   },
-
   {
     degree: "Higher Secondary Certificate (HSC)",
-    college:
-      "Residential Junior College, Ahmednagar",
+    college: "Residential Junior College, Ahmednagar",
     date: "June 2020 - March 2021",
     grade: "89.67%"
   },
-
   {
     degree: "Secondary School Certificate (SSC)",
-    college:
-      "Pandit Jawaharlal Nehru Vidyalaya, Ashti",
+    college: "Pandit Jawaharlal Nehru Vidyalaya, Ashti",
     date: "June 2018 - March 2019",
     grade: "86.20%"
   }
@@ -48,15 +38,8 @@ export const education = [
 export const skills = [
   {
     title: "Frontend",
-    skills: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "React.js"
-    ]
+    skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "React.js"]
   },
-
   {
     title: "Backend",
     skills: [
@@ -69,16 +52,10 @@ export const skills = [
       "Microservices"
     ]
   },
-
   {
     title: "Programming Languages",
-    skills: [
-      "Java",
-      "C",
-      "C++"
-    ]
+    skills: ["Java", "C", "C++"]
   },
-
   {
     title: "Others",
     skills: [
@@ -105,11 +82,9 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "Smart Payment Transaction Platform",
-
+    title: "SmartPay – Digital Wallet & Payment Platform",
     description:
-  "A full-stack fintech platform that simulates secure digital payment processing with JWT authentication, transaction validation, idempotency protection, fraud and risk detection, wallet management, Kafka-based event processing, and transaction analytics.",
-
+      "A full-stack digital wallet and payment management platform featuring JWT-based authentication, wallet management, simulated money top-ups, money transfers, transaction history, and Kafka-based asynchronous event processing.",
     technologies: [
       "Java 17",
       "Spring Boot",
@@ -122,19 +97,17 @@ export const projects = [
       "React.js",
       "Axios",
       "Docker",
-      "Swagger"
+      "Swagger",
+      "Vercel",
+      "Render"
     ],
-
-    github:
-      "#"
+    github: "https://github.com/Bhavesh113/smart-payment-platform",
+    demo: "https://smart-payment-platform.vercel.app/"
   },
-
   {
     title: "EV Charging Station Management System",
-
     description:
       "A web-based EV charging platform that allows users to find charging stations, book charging slots and access location-based services. The system includes separate modules for users, charging station owners and administrators.",
-
     technologies: [
       "Java",
       "Spring Boot",
@@ -145,28 +118,28 @@ export const projects = [
       "CSS",
       "Google Maps API"
     ],
-
     github: "#"
   },
-
   {
     title: "Employee Management System",
-
     description:
-      "A web-based employee management application designed to manage employee information, departments, roles and other employee-related operations. The system provides REST APIs for creating, updating, retrieving and deleting employee records.",
-
+      "A full-stack employee management application for managing employee records and related operations. Built with a Java Spring Boot backend and React.js frontend, with MySQL for data persistence and REST APIs.",
     technologies: [
       "Java",
       "Spring Boot",
+      "REST APIs",
       "Hibernate",
       "JPA",
       "MySQL",
-      "HTML",
-      "CSS",
+      "React.js",
       "JavaScript",
-      "React.js"
+      "HTML",
+      "CSS"
     ],
-
-    github: "#"
+    github:
+      "https://github.com/Bhavesh113/employee-management-system-backend",
+    frontendGithub:
+      "https://github.com/Bhavesh113/employee-management-system-frontend",
+    demo: "https://splendid-speculoos-a3e5e0.netlify.app/"
   }
 ];
